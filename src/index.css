@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --body-color: #f5f6fa;
+    --light-color: #ecedf1;
+    --dark-color: #121212;
+}
+
+/*----- Global-style-reset -----*/
+::-webkit-scrollbar {
+    width: 0.6vw;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--light-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-color);
+}
+
+::selection {
+    background-color: #000;
+    color: #fff;
+}
+
+html {
+    font-size: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--dark-color) var(--light-color);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--body-color);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: 'Roboto', sans-serif;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*----- Bootstrap-style-reset -----*/
+.navbar {
+    background-color: var(--dark-color);
+}
+
+.badge {
+    background-color: var(--dark-color);
+    border-radius: 0;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.form-control:focus {
+    border-color: initial;
+    box-shadow: none !important;
+}
+
+.accordion,
+.accordion-item:first-of-type .accordion-button,
+.accordion-button {
+    border-radius: 0 !important;
+}
+
+.accordion-item {
+    background-color: var(--light-color);
+}
+
+.accordion-button {
+    background-color: inherit;
+}
+
+.accordion-button:focus {
+    border-color: initial;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--dark-color);
+    color: #fff;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(./assets/images/chevron-down.svg);
+}
+
+/*----- Swiper-style-reset -----*/
+.swiper {
+    user-select: none;
+}
+
+.swiper-pagination-bullets {
+    bottom: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--dark-color) !important;
+}
