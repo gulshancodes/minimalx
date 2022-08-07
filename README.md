@@ -1,6 +1,6 @@
 # MinimalX - React-App 
 
-### [Demo Link](https://minimalx-react.netlify.app/) 🔗
+### [Demo Link](https://minimalx.netlify.app/) 🔗
 
 A simple and minimalistic designed React-App
 <br/>
