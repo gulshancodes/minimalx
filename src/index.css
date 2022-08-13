@@ -66,6 +66,10 @@ img {
     background-color: var(--dark-color);
 }
 
+.navbar-toggler:focus {
+    box-shadow: unset;
+}
+
 .badge {
     background-color: var(--dark-color);
     border-radius: 0;

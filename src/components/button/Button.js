@@ -8,7 +8,7 @@ const Button = (props) => {
     <>
       <Btn type="submit" onClick={handleClick}>{btnText}</Btn>
     </>
-  )
-}
+  );
+};
 
 export default Button;

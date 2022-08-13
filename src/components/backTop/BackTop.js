@@ -5,9 +5,10 @@ const BackTop = () => {
 
     const [isVisible, setIsVisible] = useState(false);
 
-    const handleVisibility = () => window.scrollY >= 500 ? setIsVisible(true) : setIsVisible(false);
-
+    // backTop btn visibility toggling
     useEffect(() => {
+        const handleVisibility = () => window.scrollY >= 500 ? setIsVisible(true) : setIsVisible(false);
+
         window.addEventListener('scroll', handleVisibility);
 
         return () => {

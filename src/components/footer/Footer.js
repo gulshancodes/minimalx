@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FootSocialData, FootMenuData } from './FooterData';
 import { FooterWrapper } from "./FooterStyled";
 
 const Footer = () => {
@@ -12,16 +13,25 @@ const Footer = () => {
                     <h3><Link to="/">MinimalX</Link></h3>
 
                     <div className="foot-social my-4">
-                        <Link to="/"><i className="bi bi-google fs-5"></i></Link>
-                        <Link to="/"><i className="bi bi-facebook fs-5"></i></Link>
-                        <Link to="/"><i className="bi bi-twitter fs-5"></i></Link>
-                        <Link to="/"><i className="bi bi-instagram fs-5"></i></Link>
+                        {
+                            FootSocialData.map((currValue) => {
+                                const { id, path, className } = currValue;
+                                return (
+                                    <Link to={path} key={id}><i className={className}></i></Link>
+                                );
+                            })
+                        }
                     </div>
 
                     <div className="foot-menu">
-                        <Link to="/">Terms</Link>
-                        <Link to="/">Privacy Policy</Link>
-                        <Link to="contact">Contact</Link>
+                        {
+                            FootMenuData.map((currValue) => {
+                                const { id, link, path } = currValue;
+                                return (
+                                    <Link to={path} key={id}>{link}</Link>
+                                );
+                            })
+                        }
                     </div>
 
                     <div className="copyright mt-3">

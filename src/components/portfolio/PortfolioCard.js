@@ -3,7 +3,7 @@ import { PortfolioItemWrapper } from './PortfolioCardStyled';
 
 const PortfolioCard = (props) => {
 
-    const {img, title} = props;
+    const { img, title } = props;
 
     return (
         <>
@@ -15,6 +15,6 @@ const PortfolioCard = (props) => {
             </PortfolioItemWrapper>
         </>
     );
-}
+};
 
 export default PortfolioCard;

@@ -4,9 +4,8 @@ import { Widget, SocialButton } from "../components/blog/BlogStyled";
 import PagesHead from "../components/pagesHead/PagesHead";
 import Button from "../components/button/Button";
 import BlogCard from '../components/blog/BlogCard';
-import BlogCardData from "../components/blog/BlogCardData";
 import BlogRecentPost from "../components/blog/BlogRecentPost";
-import BlogRecentPostData from "../components/blog/BlogRecentPostData";
+import { BlogArchivesData, BlogCardData, BlogRecentPostData, BlogSocialData, BlogTagsData } from "../components/blog/BlogData";
 
 const Blog = () => {
     return (
@@ -43,18 +42,16 @@ const Blog = () => {
                             <Widget>
                                 <h6>Social Links</h6>
                                 <div className="d-flex flex-wrap justify-content-lg-between gap-4">
-                                    <SocialButton to="/" color="#DB4437">
-                                        <i className="bi bi-google"></i>
-                                    </SocialButton>
-                                    <SocialButton to="/" color="#4267B2">
-                                        <i className="bi bi-facebook"></i>
-                                    </SocialButton>
-                                    <SocialButton to="/" color="#00acee">
-                                        <i className="bi bi-twitter"></i>
-                                    </SocialButton>
-                                    <SocialButton to="/" color="#fb3958">
-                                        <i className="bi bi-instagram"></i>
-                                    </SocialButton>
+                                    {
+                                        BlogSocialData.map((currValue) => {
+                                            const { id, path, className, color } = currValue;
+                                            return (
+                                                <SocialButton to={path} color={color} key={id}>
+                                                    <i className={className}></i>
+                                                </SocialButton>
+                                            );
+                                        })
+                                    }
                                 </div>
                             </Widget>
 
@@ -73,40 +70,33 @@ const Blog = () => {
                             <Widget>
                                 <h6>Archives</h6>
                                 <ul>
-                                    <li className="archives_date">
-                                        <Link to="/">January 2020</Link>
-                                        <span>(2)</span>
-                                    </li>
-                                    <li className="archives_date">
-                                        <Link to="/">August 2020</Link>
-                                        <span>(5)</span>
-                                    </li>
-                                    <li className="archives_date">
-                                        <Link to="/">February 2021</Link>
-                                        <span>(4)</span>
-                                    </li>
-                                    <li className="archives_date">
-                                        <Link to="/">October 2021</Link>
-                                        <span>(8)</span>
-                                    </li>
-                                    <li className="archives_date">
-                                        <Link to="/">March 2022</Link>
-                                        <span>(7)</span>
-                                    </li>
+                                    {
+                                        BlogArchivesData.map((currValue) => {
+                                            const { id, path, numbs, date } = currValue;
+                                            return (
+                                                <li className="archives_date" key={id}>
+                                                    <Link to={path}>{date}</Link>
+                                                    <span>({numbs})</span>
+                                                </li>
+                                            );
+                                        })
+                                    }
                                 </ul>
                             </Widget>
 
                             <Widget>
                                 <h6>Popular Tags</h6>
                                 <div className="d-flex flex-wrap gap-2">
-                                    <Link to="/" className="tags">Web Design</Link>
-                                    <Link to="/" className="tags">Single Page App</Link>
-                                    <Link to="/" className="tags">SEO Ranking</Link>
-                                    <Link to="/" className="tags">Wordpress Site</Link>
-                                    <Link to="/" className="tags">ECommerce</Link>
-                                    <Link to="/" className="tags">Branding</Link>
-                                    <Link to="/" className="tags">Affiliate Marketing</Link>
-                                    <Link to="/" className="tags">Tech Support</Link>
+                                    {
+                                        BlogTagsData.map((currValue) => {
+                                            const { id, path, tag } = currValue;
+                                            return (
+                                                <Link to={path} className="tags" key={id}>
+                                                    {tag}
+                                                </Link>
+                                            );
+                                        })
+                                    }
                                 </div>
                             </Widget>
                         </div>

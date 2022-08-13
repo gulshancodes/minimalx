@@ -36,7 +36,7 @@ const Contact = () => {
         });
     };
 
-    
+
     return (
         <>
             <PagesHead
@@ -82,11 +82,11 @@ const Contact = () => {
                         {/* Contact-form */}
                         <div className="col-lg-7">
                             <form onSubmit={handleSubmit}>
-                                <div className="d-flex gap-4">
+                                <div className="d-sm-flex gap-4">
                                     <input
                                         type="text"
                                         placeholder="Your Name*"
-                                        className="form-control"
+                                        className="form-control mb-3 mb-sm-0"
                                         name="username"
                                         value={inputValue.username}
                                         onChange={handleChange}
