@@ -28,7 +28,7 @@ const Home = () => {
       <Hero>
         <div className="hero_wrapper mt-5 py-5">
           <div className="container">
-            <h4>Welcome to MinimalX</h4>
+            <h4>Welcome to GulshanX</h4>
             <h1>We love make things amazing and simple</h1>
             <p>A digital web studio creating stunning & engaging online experiences</p>
             <Button
