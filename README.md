@@ -13,7 +13,7 @@ A simple and minimalistic designed React-App
 - #### **Form Validation**
 <br/>
 
-## Technologies used:
+## Tech Stack:
 
 - #### **ReactJS**
 <br/>
