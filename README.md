@@ -7,7 +7,7 @@ A simple and minimalistic designed React-App.
 (This is my very first React Website)
 <br/><br/>
 
-## Tech Stack:
+## Technologies used:
 
 - #### **React JS**
 - #### **React Router**
