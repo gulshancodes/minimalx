@@ -1,21 +1,18 @@
-# MinimalX - React-App 
+## MinimalX - React-App 
 
 ### [Demo Link](https://minimalx.netlify.app/) 🔗
 
-A simple and minimalistic designed React-App
+A simple and minimalistic designed React-App.
 <br/>
-
-## Features:
-
-- #### **React Router**
-- #### **React-Swiper**
-- #### **Styled Components**
-- #### **Form Validation**
-<br/>
+(This is my very first React Website)
+<br/><br/>
 
 ## Tech Stack:
 
-- #### **ReactJS**
+- #### **React JS**
+- #### **React Router**
+- #### **React Swiper**
+- #### **Styled Components**
 <br/>
 
 ## Author:
