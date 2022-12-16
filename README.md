@@ -2,9 +2,7 @@
 
 ### [Demo Link](https://minimalx.netlify.app/) 🔗
 
-A simple and minimalistic designed React-App.
-<br/>
-(This is my very first React Website)
+A simple and minimalistic designed React App (My First React App).
 <br/><br/>
 
 ## Technologies used:
